@@ -37,7 +37,7 @@ a{
     /* background-color: red; */
     max-width: 81rem;
     width: 100%;
-    margin: 16px auto;
+    margin: 0px auto;
     padding: 0 3rem;
     z-index: 10;
 }
@@ -85,6 +85,7 @@ header .container{
 }
 
 .links a{
+    font-size: 1.2rem;
     color: black;
     margin-left: 32px;
     display: inline-block;
@@ -99,6 +100,29 @@ header .container{
 /* .right{
     width: 100px;
 } */
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.9rem;
+    color: orange !important;
+    /* background-color:#fff; */
+    border: 2px solid orange;
+    border-radius: 16px;
+    text-transform: capitalize;
+    transition: 0.3s;
+    
+  }
+  
+  .btn:hover {
+    color: #fff !important;
+    background-color: orange;
+    transform: scale(1) !important;
+  }
+
+  .divider{
+    padding: 8px;
+    display:inline-block;
+}
 
 .hamburger-menu{
   position: relative;
@@ -157,7 +181,7 @@ header .container{
 }
 
 .big-title{
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: black;
     text-transform: capitalize;
     line-height: 1.4;
@@ -170,9 +194,62 @@ header .container{
     line-height: 1.7;
 }
 
-.person{
+.showcase-area .btn {
+    box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
+  }
+
+
+
+.kardusBox{
     width: 115%;
     transform: translate(15%, 25px);
+}
+
+.container-product{
+    position: relative;
+    max-width: 81rem;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0 3rem;
+    padding-top: 7rem;
+    z-index: 10;
+}
+
+.title-Product{
+    /* padding: 10rem 0rem; */
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.row-product{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+
+
+.row-product .product-information-item, 
+.row-product .product-any-device, 
+.row-product .product-keyword-item, 
+.row-product .product-cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.product-img{
+    width: 65%;
+    transform: translate(30%, 25px);
+}
+
+.product-text{
+    padding: 1.5rem 1.5rem;
+    margin: 1rem 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgb(53, 53, 53);
 }
 
 @media screen and (max-width : 870px){
@@ -205,6 +282,10 @@ header .container{
         margin-left: 0;
         padding: 2rem 0;
     }
+
+    .links .btn {
+        background: none;
+      }
 
     .overlay{
         display: block;
@@ -249,13 +330,22 @@ header .container{
         margin: 1.4rem 0 1.5rem;
     }
 
-    .person{
+    .kardusBox{
         width: 100%;
         transform: none;
     }
 
     .logo h3{
         font-size: 1.25rem;
+    }
+    
+    /* .container-product{
+        flex-direction: column;
+    } */
+
+    .product-information-item{
+        width: 100%;
+        transform: none;
     }
 }
 
@@ -271,4 +361,12 @@ header .container{
     .text {
       margin: 1.1rem 0 1.5rem;
     }
+
+    .showcase-area .btn {
+        font-size: 0.8rem;
+      }
+
+      .showcase-area .divider{
+        margin: 1.1rem 0 1.5rem;
+      }
   }
