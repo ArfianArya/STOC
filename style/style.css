@@ -22,7 +22,7 @@ a{
 }
 
 .big-wrapper{
-    padding:16px;
+    padding:1rem 0rem 0rem;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -233,9 +233,13 @@ header .container{
 .row-product .product-any-device, 
 .row-product .product-keyword-item, 
 .row-product .product-cart{
+    /* height: 100%; */
+    flex-basis: 25%;
+    flex-grow: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* border: 2px solid orange; */
     
 }
 
@@ -246,11 +250,169 @@ header .container{
 
 .product-text{
     padding: 1.5rem 1.5rem;
-    margin: 1rem 1.5rem;
+    margin: 1rem 0rem;
     text-align: center;
     font-size: 1.1rem;
     color: rgb(53, 53, 53);
 }
+
+.container-contact{
+    position: relative;
+    max-width: 81rem;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0 3rem;
+    padding-top: 7rem;
+    z-index: 10;
+}
+
+.title-contact{
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.container-contact .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+  }
+  .content .image-box{
+    max-width: 50%;
+  }
+  .content .image-box img{
+    width: 100%;
+  }
+  .content .topic{
+    font-size: 22px;
+    font-weight: 500;
+    color: orange;
+  }
+  .content form{
+    width: 40%;
+    /* margin-right: 30px; */
+  }
+  .content .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 16px 0;
+    position: relative;
+  }
+  .content .input-box input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 16px;
+    background: #f8ede1;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .content .input-box input:focus,
+  .content .input-box input:valid{
+    border-color:orange;
+    background-color: #f1f8fc;
+  }
+  .content .input-box label{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #636c72;
+    font-size: 15px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+  .content .input-box input:focus ~ label,
+  .content .input-box input:valid ~ label{
+    top: 0;
+    left: 12px;
+    display: 14px;
+    color: orange;
+    background: #f1f8fc;
+  }
+
+  .content .input-box input[type="submit"]{
+    color: orange;
+    background: #F1F8FC;
+    padding-left: 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  .content .input-box input[type="submit"]:hover{
+    color: #f1f8fc;
+    background-color: orange;
+  }
+
+#Footer{
+    background: rgb(20, 20, 20);
+    padding: 2rem 0rem 0rem;
+}
+.container-footer{
+    position: relative;
+    max-width: 81rem;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0 3rem;
+}
+.row-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* align-items: center; */
+    justify-content: center;
+    text-align: left;
+   
+}
+
+.row-footer h3{
+    color: orange;
+    padding: 0px 20px;
+}
+
+.row-footer p{
+    color: #f1f8fc;
+    font-size: 14px;
+    padding: 0px 20px;
+     /* text-align: justify; */
+}
+
+/* .footer-info .footer-links .footer-member{
+    padding: 0px 20px;
+} */
+  
+
+  .footer-member li{
+    list-style: none;
+    color: #f1f8fc;
+    padding: 0px 20px;
+    font-size: 14px;
+  }
+
+  .footer-bottom{
+    background: #000;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.footer-bottom p{
+    color: wheat;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    color: orange;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+}
+  
 
 @media screen and (max-width : 870px){
 
@@ -343,11 +505,26 @@ header .container{
         flex-direction: column;
     } */
 
-    .product-information-item{
-        width: 100%;
+    .row-product{
+        width: 25%;
         transform: none;
     }
+    .product-text{
+        margin: 1.1rem 0 1.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+        color: rgb(53, 53, 53);
+    }
+
+    .content .image-box{
+        max-width: 70%;
+      }
+      .content{
+        padding: 10px 0;
+      }
 }
+
+
 
 @media screen and (max-width: 470px) {
     .container {
@@ -368,5 +545,12 @@ header .container{
 
       .showcase-area .divider{
         margin: 1.1rem 0 1.5rem;
+      }
+      .content .image-box{
+        display: none;
+      }
+      .content form{
+        width: 100%;
+        margin-left: 30px;
       }
   }
