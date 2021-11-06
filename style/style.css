@@ -412,7 +412,18 @@ header .container{
     text-transform: uppercase;
     /* font-weight: bold; */
 }
-  
+
+
+.instagram{
+    width: 48px;
+    padding: 0px 20px;
+}
+.instagram-btn{
+    width: 48px;
+}
+.instagram-btn:hover{
+    opacity: 0.7;
+}
 
 @media screen and (max-width : 870px){
 
