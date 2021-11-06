@@ -73,7 +73,7 @@ header .container{
 
 .logo h3{
     color:orange;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.2;
     font-weight: 700;
 }
@@ -186,6 +186,12 @@ header .container{
     text-transform: capitalize;
     line-height: 1.4;
 }
+
+h1{
+    /* color: orange; */
+    color: black;
+}
+
 .text{
     color: grey;
     font-size: 1.1rem;
